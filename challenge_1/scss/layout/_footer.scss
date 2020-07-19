@@ -1,0 +1,162 @@
+.footer {
+  background: $dark-cyan-color;
+  position: relative;
+  margin-top: 160px;
+  &::before {
+    content: '';
+    position: absolute;
+    background: url('/images/bg-footer-top-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 160px;
+    top: -160px;
+    width: 100%;
+
+    @include media(tablet) {
+      background: url('/images/bg-footer-top-mobile.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 80px;
+      top: -80px;
+    }
+
+    @include media(thone) {
+      height: 61px;
+      top: -60px;
+    }
+
+    @include media(phone) {
+      height: 51px;
+      top: -50px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 150px;
+    flex-wrap: wrap-reverse;
+
+    @include media(tablet) {
+      padding: 50px 100px;
+    }
+
+    @include media(thone) {
+      padding: 50px 50px;
+    }
+
+    @include media(phone) {
+      padding: 50px 25px;
+    }
+  }
+
+  &__info {
+    // max-width: 250px;
+
+    &--logo {
+      height: 30px;
+    }
+
+    &--contact {
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: 20px;
+      }
+      span {
+        color: $pale-blue-color;
+        font-size: 14px;
+        opacity: 0.9;
+      }
+    }
+
+    @include media(tablet) {
+      margin-top: 100px;
+      &--logo {
+        height: 40px;
+      }
+
+      &--contact span {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__social {
+    margin-top: 60px;
+
+    &--icon {
+      height: 25px;
+      margin-right: 18px;
+    }
+
+    @include media(tablet) {
+      margin-top: 50px;
+      &--icon {
+        height: 30px;
+      }
+    }
+  }
+
+  &__newsletter {
+    &--title {
+      color: $pale-blue-color;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    &--input {
+      margin-right: 25px;
+    }
+
+    &--form {
+      height: 36px;
+      display: flex;
+
+      @include media(thone) {
+        flex-direction: column;
+        input {
+          width: 100%;
+          margin: 0;
+        }
+
+        button {
+          align-self: flex-end;
+          margin-top: 10px;
+          padding: 12px 25px;
+        }
+      }
+    }
+
+    @include media(tablet) {
+      &--title {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__text {
+    color: $pale-blue-color;
+    margin: 20px 0;
+    font-size: 12px;
+    opacity: 0.9;
+    line-height: 1.6;
+    max-width: 280px;
+
+    @include media(tablet) {
+      font-size: 15px;
+      max-width: none;
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}

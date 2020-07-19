@@ -1,0 +1,26 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $dark-cyan-color;
+  line-height: 1.2;
+  font-family: $font-heading;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 35px;
+}
+
+p {
+  line-height: 1.4;
+}

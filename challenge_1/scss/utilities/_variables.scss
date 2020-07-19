@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+//== Typography
+
+$font-body: 'Open Sans';
+$font-heading: 'Poppins';
+
+//== Colors
+$pink-color: hsl(322, 100%, 66%);
+$dark-cyan-color: hsl(192, 100%, 9%);
+$pale-blue-color: hsl(207, 100%, 98%);
+
+$header-height: 100px;
+
+$breakpoints: (
+  desktop: 1000px,
+  tablet: 768px,
+  thone: 600px,
+  phone: 376px,
+);

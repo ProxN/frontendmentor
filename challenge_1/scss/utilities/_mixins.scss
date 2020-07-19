@@ -1,0 +1,6 @@
+@mixin media($breakpoint) {
+  $breakvalue: map-get($breakpoints, $breakpoint);
+  @media (max-width: $breakvalue) {
+    @content;
+  }
+}

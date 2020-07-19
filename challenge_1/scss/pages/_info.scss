@@ -1,0 +1,138 @@
+.info {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 150px;
+    position: relative;
+    background: $pale-blue-color;
+    margin: 140px 0;
+
+    &--bg::before,
+    &--bg::after,
+    &--bg2::after,
+    &--bg2::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 140px;
+      left: 0;
+    }
+    &--bg::before {
+      background: url('/images//bg-section-top-desktop-1.svg') no-repeat;
+      background-size: cover;
+      top: -140px;
+    }
+    &--bg::after {
+      background: url('/images//bg-section-bottom-desktop-1.svg') no-repeat;
+      bottom: -140px;
+      background-size: cover;
+    }
+
+    &--bg2::before {
+      background: url('/images//bg-section-top-desktop-2.svg') no-repeat;
+      background-size: cover;
+      top: -140px;
+    }
+
+    &--bg2::after {
+      background: url('/images//bg-section-bottom-desktop-2.svg') no-repeat;
+      bottom: -140px;
+      background-size: cover;
+    }
+
+    @include media(tablet) {
+      flex-wrap: wrap-reverse;
+      padding: 50px 0px;
+      justify-content: center;
+    }
+
+    @include media(thone) {
+      &--bg::before {
+        background: url('/images/bg-section-top-mobile-1.svg') no-repeat;
+        background-size: cover;
+      }
+
+      &--bg::after {
+        background: url('/images/bg-section-bottom-mobile-1.svg') no-repeat;
+        background-size: cover;
+      }
+
+      &--bg2::before {
+        background: url('/images/bg-section-top-mobile-2.svg') no-repeat;
+        background-size: cover;
+      }
+
+      &--bg2::after {
+        background: url('/images/bg-section-bottom-mobile-2.svg') no-repeat;
+        background-size: cover;
+      }
+    }
+
+    @include media(phone) {
+      &--bg::before,
+      &--bg2::before {
+        height: 96px;
+        top: -96px;
+      }
+      &--bg::after {
+        height: 70px;
+        bottom: -70px;
+      }
+
+      &--bg2::after {
+        height: 100px;
+        bottom: -100px;
+      }
+    }
+  }
+
+  &__reverse {
+    flex-direction: row-reverse;
+    background: #fff;
+    padding: 150px;
+    @include media(tablet) {
+      padding: 0;
+    }
+  }
+
+  &__feature {
+    max-width: 450px;
+
+    &--text {
+      margin-top: 25px;
+      opacity: 0.9;
+      font-size: 14px;
+    }
+
+    @include media(tablet) {
+      margin-top: 100px;
+      text-align: center;
+      padding: 0 5px;
+
+      &--text {
+        font-size: 16px;
+      }
+
+      &--title {
+        font-size: 25px;
+      }
+    }
+  }
+
+  &__image {
+    height: 350px;
+
+    @include media(tablet) {
+      height: 300px;
+    }
+
+    @include media(thone) {
+      height: 200px;
+    }
+  }
+
+  @include media(phone) {
+    margin-top: -100px;
+  }
+}

@@ -1,0 +1,20 @@
+.header {
+  height: $header-height;
+  display: flex;
+  align-items: center;
+
+  &__nav {
+    width: 100%;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+
+    &--logo {
+      height: 20px;
+    }
+
+    @include media(phone) {
+      padding: 0 25px;
+    }
+  }
+}

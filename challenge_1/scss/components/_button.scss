@@ -1,0 +1,42 @@
+.btn {
+  background: transparent;
+  color: #333;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+  height: 100%;
+
+  &__default {
+    border: 1px solid $pink-color;
+    color: $pink-color;
+    padding: 6px 20px;
+    box-shadow: 0 0 10px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  &__primary {
+    background: $pink-color;
+    color: $pale-blue-color;
+    font-weight: 600;
+
+    box-shadow: 0 0 8px -1px rgba(0, 0, 0, 0.3);
+  }
+
+  &__medium {
+    padding: 6px 25px;
+  }
+
+  &__big {
+    width: 300px;
+    padding: 18px 12px;
+  }
+
+  &__rounded {
+    border-radius: 50px;
+
+    &--sm {
+      border-radius: 3px;
+    }
+  }
+}
