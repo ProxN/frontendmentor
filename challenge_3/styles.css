@@ -159,11 +159,55 @@ Components
   margin-right: 20px;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   body {
     background-image: url(./images/bg-mobile.svg);
   }
 
+  .hero__content {
+    flex-direction: column;
+    padding: 0 25px;
+  }
+
+  .hero {
+    height: auto;
+  }
+
+  .hero__content--img {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero__content--img img {
+    max-width: 100%;
+  }
+
+  .hero__info--heading {
+    font-size: 25px;
+    max-width: 100%;
+    margin-top: 50px;
+  }
+
+  .hero__info--text {
+    max-width: 100%;
+    font-size: 17px;
+  }
+
+  .hero__info--btn {
+    padding: 10px 70px;
+  }
+
+  .footer {
+    justify-content: center;
+  }
+
+  .footer__social {
+    margin: 0;
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 375px) {
   .hero__content {
     flex-direction: column;
     padding: 0 25px;
