@@ -27,6 +27,11 @@ body {
   font-size: 14px;
   line-height: 1.6;
   height: 100%;
+
+  background-image: url(./images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right;
 }
 
 h1,
@@ -155,6 +160,10 @@ Components
 }
 
 @media (max-width: 375px) {
+  body {
+    background-image: url(./images/bg-mobile.svg);
+  }
+
   .hero__content {
     flex-direction: column;
     padding: 0 25px;
